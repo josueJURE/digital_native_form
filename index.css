@@ -4,6 +4,7 @@
   --color-grey: rgb(60, 60, 59);
   --color-red: rgb(213, 0, 100);
   --input-width: 156px;
+  --color-pink: rgb(231, 0, 100);
 }
 
 /* Fonts */
@@ -39,6 +40,10 @@ input {
   border: none;
   padding: 4px 6px;
   width: var(--input-width);
+}
+
+input:not(:valid) {
+  background: var(--color-pink);
 }
 
 label {

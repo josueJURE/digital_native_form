@@ -3,6 +3,7 @@
 function checkLuhnCardNumber (cardNumberString) {
     let sum = 0;
     let isSecond = false;
+
     for (let i = cardNumberString.length - 1; i >= 0; i--) {
       let digit = Number(cardNumberString[i]);
       if (isSecond) {
@@ -14,5 +15,5 @@ function checkLuhnCardNumber (cardNumberString) {
       sum += digit % 10;
       isSecond = !isSecond;
     }
-    return (sum % 10 === 0);
+    return !!(sum % 10 === 0);
   }
