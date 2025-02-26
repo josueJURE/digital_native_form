@@ -12,23 +12,23 @@
 </head>
 <body>
     <div class="parent-container">
-        <form >
+        <form action="mailto:challenge@dn-uk.com" >
             <div class="label_input_elements">
                 <label for="name">Name:
-                <input id="name" placeholder="Enter Your Name">
+                <input pattern="^[A-Za-z!#$%&'*+-\/=?^_`\{\|\}~]{2,} [A-Za-z!#$%&'*+-\/=?^_`\{\|\}~]{2,}$" id="name" placeholder="Enter Your Name">
             </label>
 
             </div>
         
             <div class="label_input_elements">
-                <label for="last-name">Email:
-                <input id="last-name" placeholder="Enter Your Email">
+                <label for="email">Email:
+                <input id="email" pattern="[^@.]+@[^@.]+\.[^@.]+" placeholder="Enter Your Email" type="email">
             </label>
 
             </div>
             <div class="label_input_elements">
                 <label for="credit-card">Card:
-                <input inputmode="numeric" pattern="[0-9]{13,19}" id="credit-card" placeholder="Enter a Proxy Credit Card Number.">
+                <input inputmode="numeric" pattern="(?=[1-9])[0-9]{13,19}" id="credit-card" placeholder="Enter a Proxy Credit Card Number.">
             </label>
             </div>
             <div class="btn-container"> <button class="btn">Submit</button></div>
